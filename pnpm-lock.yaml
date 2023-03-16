@@ -6,6 +6,7 @@ specifiers:
   '@types/node': 18.15.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@types/react-vertical-timeline-component': 3.3.3
   '@types/three': 0.149.0
   autoprefixer: 10.4.14
   eslint: 8.36.0
@@ -43,6 +44,7 @@ devDependencies:
   '@types/node': 18.15.0
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
+  '@types/react-vertical-timeline-component': 3.3.3
   '@types/three': 0.149.0
   autoprefixer: 10.4.14_postcss@8.4.21
   eslint: 8.36.0
@@ -491,6 +493,12 @@ packages:
     dependencies:
       '@types/react': 18.0.28
     dev: false
+
+  /@types/react-vertical-timeline-component/3.3.3:
+    resolution: {integrity: sha512-xmKeQ9TtZLeGtsWQx2im0U79wnC0M2F/FPEAHP7uS3G9SAVgis1XSHzq/mq7XrcbnI9eiZbL7dhiy/TqCuDc7w==}
+    dependencies:
+      '@types/react': 18.0.28
+    dev: true
 
   /@types/react/18.0.28:
     resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}

@@ -13,9 +13,17 @@ export function Hero() {
             <div className="violet-gradient h-40 w-1 sm:h-80" />
           </div>
 
-          <div>
+          <div className="z-50 select-none">
             <h1 className={`heroHeadText text-white`}>
-              Hi, I&apos;m <span className="text-[#915EFF] hover:text-red-300">Sudhanshu</span>
+              Hi, I&apos;m{" "}
+              <a
+                href="https://twitter.com/tometo_dev"
+                target="_blank"
+                rel="noreferrer noopenner"
+                className="text-[#915EFF] hover:text-[#1DA1F2]"
+              >
+                Sudhanshu
+              </a>
             </h1>
             <p className={`heroSubText mt-2 text-white-100`}>I am a frontend developer</p>
           </div>
