@@ -1,2 +1,5 @@
 "*.{ts,tsx}":
   - pnpm lint:fix
+
+"*.css":
+  - prettier --write
