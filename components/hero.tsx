@@ -1,7 +1,7 @@
 "use client";
 
 import { ComputerCanvas } from "./canvas/computer";
-import { Scroller } from "./scroller";
+import { Scroller } from "./motion/scroller";
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
 
           <div>
             <h1 className={`heroHeadText text-white`}>
-              Hi, I&apos;m <span className="text-[#915EFF]">Sudhanshu</span>
+              Hi, I&apos;m <span className="text-[#915EFF] hover:text-red-300">Sudhanshu</span>
             </h1>
             <p className={`heroSubText mt-2 text-white-100`}>I am a frontend developer</p>
           </div>
