@@ -13,7 +13,7 @@ export function Hero() {
             <div className="violet-gradient h-40 w-1 sm:h-80" />
           </div>
 
-          <div className="z-50 select-none">
+          <div className="z-10 select-none">
             <h1 className={`heroHeadText text-white`}>
               Hi, I&apos;m{" "}
               <a

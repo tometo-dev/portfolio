@@ -71,7 +71,7 @@ export function Nav() {
           <div
             className={`${
               !isOpen ? "hidden" : "flex"
-            } black-gradient absolute top-20 right-0 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+            } black-gradient absolute top-20 right-0 z-20 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
           >
             <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
               <li
