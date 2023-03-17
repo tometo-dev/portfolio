@@ -8,9 +8,15 @@ import closeIcon from "@/assets/icons/close.svg";
 import menuIcon from "@/assets/icons/menu.svg";
 import logo from "@/assets/images/logo.png";
 
+const navLinks = [
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "connect", title: "Connect" },
+] as const;
+
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState<(typeof navLinks)[number]["id"] | "">("");
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -36,29 +42,23 @@ export function Nav() {
       } py-5`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setActive("")}>
+        <Link href="#hero" className="flex items-center gap-2" onClick={() => setActive("")}>
           <Image src={logo} alt="logo" className="h-10 w-10 object-contain" />
           <p className="cursor-pointer text-lg font-bold text-white">Sudhanshu</p>
         </Link>
         <ul className="hidden list-none flex-row gap-10 sm:flex">
-          <li
-            className={`cursor-pointer text-lg font-medium ${
-              active === "about" ? "text-white" : "text-secondary"
-            } hover:text-white`}
-          >
-            <a href="#about" onClick={() => setActive("about")}>
-              About
-            </a>
-          </li>
-          <li
-            className={`cursor-pointer text-lg font-medium ${
-              active === "work" ? "text-white" : "text-secondary"
-            } hover:text-white`}
-          >
-            <a href="#work" onClick={() => setActive("work")}>
-              Work
-            </a>
-          </li>
+          {navLinks.map((link) => (
+            <li
+              key={link.id}
+              className={`cursor-pointer text-lg font-medium ${
+                active === link.id ? "text-white" : "text-secondary"
+              } hover:text-white`}
+            >
+              <a href={`#${link.id}`} onClick={() => setActive(link.id)}>
+                {link.title}
+              </a>
+            </li>
+          ))}
         </ul>
         <div className="flex flex-1 items-center justify-end sm:hidden">
           <Image
@@ -74,28 +74,20 @@ export function Nav() {
             } black-gradient absolute top-20 right-0 z-20 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
           >
             <ul className="flex flex-1 list-none flex-col items-start justify-end gap-4">
-              <li
-                className={`font-poppins cursor-pointer text-[16px] font-medium ${
-                  active === "about" ? "text-white" : "text-secondary"
-                }`}
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                  setActive("about");
-                }}
-              >
-                <a href="#about">About</a>
-              </li>
-              <li
-                className={`font-poppins cursor-pointer text-[16px] font-medium ${
-                  active === "work" ? "text-white" : "text-secondary"
-                }`}
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                  setActive("work");
-                }}
-              >
-                <a href="#work">Work</a>
-              </li>
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`font-poppins cursor-pointer text-[16px] font-medium ${
+                    active === link.id ? "text-white" : "text-secondary"
+                  }`}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    setActive(link.id);
+                  }}
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

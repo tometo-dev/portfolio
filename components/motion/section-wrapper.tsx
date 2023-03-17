@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 import { getStaggerContainer } from "@/utils/framer-motion";
 
-export function SectionWrapper({ id, children }: { id: string; children: ReactNode }) {
+export function SectionWrapper({ id = "", children }: { id?: string; children: ReactNode }) {
   return (
     <motion.section
       variants={getStaggerContainer()}
