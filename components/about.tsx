@@ -88,7 +88,8 @@ export function About() {
       <motion.p variants={getFadeIn("", "", 0.1, 1)} className="mt-4 max-w-4xl text-[17px] leading-[30px]">
         I&apos;m a frontend developer with 2+ years of experience. I have worked on a wide range of projects from small
         to large scale. I have worked on projects using React, Next.js, Tailwind CSS and other frontend technologies.
-        <br /> I love learning new things and applying them in my projects
+        <br /> I love learning new things and applying them in my projects. Currently, I&apos;m learning Rust in my free
+        time.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
