@@ -1,6 +1,6 @@
 "use client";
 
-import { ComputerCanvas } from "./canvas/computer";
+import { ComputerCanvas } from "./canvas/computer/computer";
 import { Scroller } from "./motion/scroller";
 
 export function Hero() {
