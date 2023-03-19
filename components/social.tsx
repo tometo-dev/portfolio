@@ -1,15 +1,18 @@
 "use client";
 import { motion } from "framer-motion";
 
+import github from "@/assets/social/github.svg";
+import linkedin from "@/assets/social/linkedin.svg";
+import twitter from "@/assets/social/twitter.svg";
 import { getSlideIn } from "@/utils/framer-motion";
 
 import { SectionWrapper } from "./motion/section-wrapper";
 import { TiltCard } from "./tilt-card";
 
 const socialLinks: Array<{ name: string; icon: string; link: string }> = [
-  { name: "twitter", icon: "./social/twitter.svg", link: "https://twitter.com/tometo_dev" },
-  { name: "github", icon: "./social/github.svg", link: "https://github.com/tometo-dev" },
-  { name: "linkedin", icon: "./social/linkedin.svg", link: "https://www.linkedin.com/in/perfectsudh" },
+  { name: "twitter", icon: twitter.src, link: "https://twitter.com/tometo_dev" },
+  { name: "github", icon: github.src, link: "https://github.com/tometo-dev" },
+  { name: "linkedin", icon: linkedin.src, link: "https://www.linkedin.com/in/perfectsudh" },
 ];
 
 export function Social() {
