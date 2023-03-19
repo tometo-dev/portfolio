@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-vertical-timeline-component": "3.6.0",
     "three": "0.150.1",
+    "three-stdlib": "2.21.8",
     "vanilla-tilt": "1.8.0"
   },
   "devDependencies": {

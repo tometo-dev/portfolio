@@ -2,6 +2,8 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useState } from "react";
 
+import { useIsMobileHook } from "@/hooks";
+
 import { CanvasLoader } from "../canvas-loader";
 
 function Computer({ isMobile }: { isMobile: boolean }) {
@@ -23,22 +25,7 @@ function Computer({ isMobile }: { isMobile: boolean }) {
 }
 
 export function ComputerCanvas() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+  const isMobile = useIsMobileHook();
 
   return (
     <Canvas
