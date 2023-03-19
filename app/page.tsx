@@ -4,6 +4,8 @@ import { Hero } from "@/components/hero";
 import { Social } from "@/components/social";
 import { Tech } from "@/components/tech";
 
+export const revalidate = 60;
+
 export default function Page() {
   return (
     <>

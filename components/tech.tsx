@@ -12,17 +12,17 @@ import typescript from "@/assets/tech/typescript.svg";
 import { BallCanvas } from "./canvas/ball";
 import { SectionWrapper } from "./motion/section-wrapper";
 
-const technologies: Array<{ name: string; icon: string }> = [
-  { name: "TypeScript", icon: typescript.src },
-  { name: "React", icon: react.src },
-  { name: "Next.js", icon: nextjs.src },
-  { name: "Tailwind CSS", icon: tailwindcss.src },
-  { name: "Docker", icon: docker.src },
-  { name: "Redux Toolkit", icon: redux.src },
-  { name: "Tanstack Query", icon: tanstackQuery.src },
-  { name: "Storybook", icon: storybook.src },
-  { name: "Testing Library", icon: testingLibrary.src },
-  { name: "Python", icon: python.src },
+const technologies: Array<{ name: string; icon: string; link: string }> = [
+  { name: "TypeScript", icon: typescript.src, link: "https://www.typescriptlang.org" },
+  { name: "React", icon: react.src, link: "https://react.dev" },
+  { name: "Next.js", icon: nextjs.src, link: "https://nextjs.org" },
+  { name: "Tailwind CSS", icon: tailwindcss.src, link: "https://tailwindcss.com" },
+  { name: "Docker", icon: docker.src, link: "https://www.docker.com" },
+  { name: "Redux Toolkit", icon: redux.src, link: "https://redux-toolkit.js.org" },
+  { name: "Tanstack Query", icon: tanstackQuery.src, link: "https://tanstack.com/query" },
+  { name: "Storybook", icon: storybook.src, link: "https://storybook.js.org" },
+  { name: "Testing Library", icon: testingLibrary.src, link: "https://testing-library.com" },
+  { name: "Python", icon: python.src, link: "https://www.python.org" },
 ];
 
 export function Tech() {
@@ -31,7 +31,9 @@ export function Tech() {
       <div className="flex flex-row flex-wrap justify-center gap-10">
         {technologies.map((technology) => (
           <div className="h-28 w-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
+            <a href={technology.link} target="_blank" rel="noreferrer noopener">
+              <BallCanvas icon={technology.icon} />
+            </a>
           </div>
         ))}
       </div>

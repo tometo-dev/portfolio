@@ -55,7 +55,7 @@ export function Social() {
               ))}
             </div>
           </div>
-          <div className="absolute bottom-8 sm:static  sm:block">
+          <div className="absolute -top-10 right-0 sm:block  md:static">
             <PhoenixCanvas />
           </div>
         </motion.div>

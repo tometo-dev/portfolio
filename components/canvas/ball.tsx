@@ -1,8 +1,8 @@
 "use client";
 
-import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei";
+import { Decal, Float, Preload, useTexture } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 
 import { CanvasLoader } from "../canvas-loader";
 
@@ -26,7 +26,6 @@ export function BallCanvas({ icon }: { icon: string }) {
   return (
     <Canvas frameloop="demand" dpr={[1, 2]} gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
 
