@@ -9,6 +9,7 @@ import { getSlideIn } from "@/utils/framer-motion";
 
 import { PhoenixCanvas } from "./canvas/phoenix/phoenix";
 import { SectionWrapper } from "./motion/section-wrapper";
+import { Sparkles } from "./sparkles";
 import { TiltCard } from "./tilt-card";
 
 const socialLinks: Array<{ name: string; icon: string; link: string }> = [
@@ -26,7 +27,9 @@ export function Social() {
           className="relative flex-[0.75] flex-row flex-wrap rounded-2xl bg-black-100 p-8 sm:flex"
         >
           <div className="flex-1">
-            <p className="sectionSubText">Get in touch</p>
+            <Sparkles>
+              <p className="sectionSubText">Get in touch</p>
+            </Sparkles>
             <h3 className="sectionHeadText">Find me here.</h3>
 
             <div className="mt-10 flex flex-row flex-wrap justify-start gap-10">
@@ -39,17 +42,19 @@ export function Social() {
                       speed: 450,
                     }}
                   >
-                    <a href={social.link} target="_blank" rel="noopener noreffer">
-                      <div
-                        className="h-12 w-12 text-black"
-                        style={{
-                          backgroundImage: `url(${social.icon})`,
-                          backgroundSize: "contain",
-                          backgroundRepeat: "no-repeat",
-                          backgroundPosition: "center",
-                        }}
-                      />
-                    </a>
+                    <Sparkles>
+                      <a href={social.link} target="_blank" rel="noopener noreffer">
+                        <div
+                          className="h-12 w-12 text-black"
+                          style={{
+                            backgroundImage: `url(${social.icon})`,
+                            backgroundSize: "contain",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center",
+                          }}
+                        />
+                      </a>
+                    </Sparkles>
                   </TiltCard>
                 </div>
               ))}

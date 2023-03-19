@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 
 import { CanvasLoader } from "@/components/canvas-loader";
-import { useIsMobileHook } from "@/hooks";
+import { useIsMobileHook } from "@/components/hooks";
 
 import { Phoenix as PhoenixModel } from "./model";
 

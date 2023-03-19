@@ -8,6 +8,8 @@ import closeIcon from "@/assets/icons/close.svg";
 import menuIcon from "@/assets/icons/menu.svg";
 import logo from "@/assets/images/logo.png";
 
+import { Sparkles } from "./sparkles";
+
 const navLinks = [
   { id: "about", title: "About" },
   { id: "work", title: "Work" },
@@ -44,7 +46,9 @@ export function Nav() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link href="#hero" className="flex items-center gap-2" onClick={() => setActive("")}>
           <Image src={logo} alt="logo" className="h-10 w-10 object-contain" />
-          <p className="cursor-pointer text-lg font-bold text-white">Sudhanshu</p>
+          <Sparkles>
+            <p className="cursor-pointer text-lg font-bold text-white">Sudhanshu</p>
+          </Sparkles>
         </Link>
         <ul className="hidden list-none flex-row gap-10 sm:flex">
           {navLinks.map((link) => (
