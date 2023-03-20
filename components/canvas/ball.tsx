@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  Decal,
-  Float,
-  Html,
-  OrbitControls,
-  OrthographicCamera,
-  Preload,
-  useAspect,
-  useTexture,
-} from "@react-three/drei";
+import { Decal, Float, OrthographicCamera, Preload, useAspect, useTexture } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Box, Flex } from "@react-three/flex";
 import { ReactNode, Suspense, useRef } from "react";
@@ -31,7 +22,7 @@ function FlexComponent({ children }: { children: ReactNode }) {
   );
 }
 
-function Ball(props: { imgUrl: string; link: string }) {
+function Ball(props: { imgUrl: string; link: string; name: string }) {
   const [decal] = useTexture([props.imgUrl]);
   const ref = useRef<Mesh<BufferGeometry>>(null);
 
@@ -53,10 +44,11 @@ function Ball(props: { imgUrl: string; link: string }) {
       <mesh
         castShadow
         receiveShadow
-        scale={2.75}
+        scale={2.5}
         ref={ref}
-        onClick={() => {
-          window.open(props.link, "_blank");
+        onClick={(event) => {
+          event.stopPropagation();
+          window.open(props.link, props.name);
         }}
       >
         <icosahedronGeometry args={[1, 1]} />
@@ -74,8 +66,8 @@ export function BallCanvas({ technologies }: { technologies: Array<{ name: strin
         <OrthographicCamera makeDefault position={[0, 0, 5]} zoom={15} />
         <FlexComponent>
           {technologies.map((technology, i) => (
-            <Box margin={0.2} key={i} centerAnchor>
-              <Ball imgUrl={technology.icon} link={technology.link} />
+            <Box margin={0.2} key={i} centerAnchor height={6} width={6}>
+              <Ball imgUrl={technology.icon} link={technology.link} name={technology.name} />
             </Box>
           ))}
         </FlexComponent>

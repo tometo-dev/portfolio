@@ -27,7 +27,7 @@ const technologies: Array<{ name: string; icon: string; link: string }> = [
 
 export function Tech() {
   return (
-    <SectionWrapper id="">
+    <SectionWrapper>
       <div className="flex h-96 flex-row flex-wrap justify-center gap-10 md:h-48 lg:h-28">
         <BallCanvas technologies={technologies} />
       </div>
