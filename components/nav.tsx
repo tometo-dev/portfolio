@@ -44,7 +44,14 @@ export function Nav() {
       } py-5`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <Link href="#hero" className="flex items-center gap-2" onClick={() => setActive("")}>
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
           <Image src={logo} alt="logo" className="h-10 w-10 object-contain" />
           <Sparkles>
             <p className="cursor-pointer text-lg font-bold text-white">Sudhanshu</p>

@@ -28,14 +28,8 @@ const technologies: Array<{ name: string; icon: string; link: string }> = [
 export function Tech() {
   return (
     <SectionWrapper id="">
-      <div className="flex flex-row flex-wrap justify-center gap-10">
-        {technologies.map((technology) => (
-          <div className="h-28 w-28" key={technology.name}>
-            <a href={technology.link} target="_blank" rel="noreferrer noopener">
-              <BallCanvas icon={technology.icon} />
-            </a>
-          </div>
-        ))}
+      <div className="flex h-96 flex-row flex-wrap justify-center gap-10 md:h-48 lg:h-28">
+        <BallCanvas technologies={technologies} />
       </div>
     </SectionWrapper>
   );
