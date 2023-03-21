@@ -11,9 +11,10 @@ import logo from "@/assets/images/logo.png";
 import { Sparkles } from "./sparkles";
 
 const navLinks = [
-  { id: "about", title: "About" },
-  { id: "work", title: "Work" },
-  { id: "connect", title: "Connect" },
+  { id: "about", title: "About", link: "/#about" },
+  { id: "work", title: "Work", link: "/#work" },
+  { id: "connect", title: "Connect", link: "/#connect" },
+  // { id: "voyage", title: "Voyage", link: "/voyage" },
 ] as const;
 
 export function Nav() {
@@ -65,7 +66,7 @@ export function Nav() {
                 active === link.id ? "text-white" : "text-secondary"
               } hover:text-white`}
             >
-              <a href={`#${link.id}`} onClick={() => setActive(link.id)}>
+              <a href={link.link} onClick={() => setActive(link.id)}>
                 {link.title}
               </a>
             </li>
@@ -96,7 +97,7 @@ export function Nav() {
                     setActive(link.id);
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  <a href={link.link}>{link.title}</a>
                 </li>
               ))}
             </ul>
