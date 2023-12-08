@@ -13,7 +13,7 @@ import { Sparkles } from "./sparkles";
 import { TiltCard } from "./tilt-card";
 
 const socialLinks: Array<{ name: string; icon: string; link: string }> = [
-  { name: "twitter", icon: twitter.src, link: "https://twitter.com/tometo_dev" },
+  { name: "twitter", icon: twitter.src, link: "https://twitter.com/trululusolulu" },
   { name: "github", icon: github.src, link: "https://github.com/tometo-dev" },
   { name: "linkedin", icon: linkedin.src, link: "https://www.linkedin.com/in/perfectsudh" },
 ];
