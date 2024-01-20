@@ -34,7 +34,7 @@ export function Social() {
 
             <div className="mt-10 flex flex-row flex-wrap justify-start gap-10">
               {socialLinks.map((social) => (
-                <div className="h-20 w-20" key={social.name}>
+                <div className="size-20" key={social.name}>
                   <TiltCard
                     options={{
                       max: 45,
@@ -45,7 +45,7 @@ export function Social() {
                     <Sparkles>
                       <a href={social.link} target="_blank" rel="noopener noreffer">
                         <div
-                          className="h-12 w-12 text-black"
+                          className="size-12 text-black"
                           style={{
                             backgroundImage: `url(${social.icon})`,
                             backgroundSize: "contain",

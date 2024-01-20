@@ -79,8 +79,8 @@ function ExperienceCard({ experience }: { experience: Experiences[number] }) {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex h-full w-full items-center justify-center">
-          <Image src={experience.icon} alt={experience.companyName} className="h-[60%] w-[60%] object-contain" />
+        <div className="flex size-full items-center justify-center">
+          <Image src={experience.icon} alt={experience.companyName} className="size-[60%] object-contain" />
         </div>
       }
     >

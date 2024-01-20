@@ -34,7 +34,7 @@ function TechCard({
         className="green-pink-gradient w-full rounded-[20px] p-[1px] shadow-card"
       >
         <div className="flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-tertiary py-5 px-12">
-          <div className="h-28 w-28">{renderIcon()}</div>
+          <div className="size-28">{renderIcon()}</div>
           <h3 className="text-center text-[20px] font-bold text-white">{title}</h3>
         </div>
       </motion.div>

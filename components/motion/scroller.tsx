@@ -14,7 +14,7 @@ export function Scroller() {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="mb-1 h-3 w-3 rounded-full bg-secondary"
+            className="mb-1 size-3 rounded-full bg-secondary"
           />
         </div>
       </a>

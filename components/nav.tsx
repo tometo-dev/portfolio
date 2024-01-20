@@ -53,7 +53,7 @@ export function Nav() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <Image src={logo} alt="logo" className="h-10 w-10 object-contain" />
+          <Image src={logo} alt="logo" className="size-10 object-contain" />
           <Sparkles>
             <p className="cursor-pointer text-lg font-bold text-white">Sudhanshu</p>
           </Sparkles>
@@ -76,7 +76,7 @@ export function Nav() {
           <Image
             src={isOpen ? closeIcon : menuIcon}
             alt="menu"
-            className="h-[28px] w-[28px] object-contain"
+            className="size-[28px] object-contain"
             onClick={() => setIsOpen(!isOpen)}
           />
 
